@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>svg</title>
+</head>
+<body>
+
+
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <!-- 一个矩形 -->
+<!--    <path d="M10 10 H90 V90 H10 Z" fill="blue" />-->
+<!--    <path d="M 100 100 H 150 V 150 H 100 Z" fill="red"></path>-->
+<!--    <path d="M 0 0 L 4 0 L 4 100 L 0 100 L 0 0 Z" fill="blue"></path>-->
+<!--    <path d="M 0 0 H 100 V 4 H 0 Z" fill="red"></path>-->
+<!--    <path d="M 0 0 L 4 0 L 4 100 L 0 100 L 0 0 Z" fill="red"-->
+<!--    transform="matrix(0,1,-1,0,150,150)"></path>-->
+    <path d="M 0 0 L 40 0 L 40 100 Z" fill="blue"></path>
+    <path d="M 0 0 L 40 0 L 40 100 Z" fill="red"
+          transform="matrix(0,1,-1,0,100,100)"></path>
+    <rect x="0" y="0" width="100" height="100" fill="#feac5e">
+        <animate attributeName="x" from="0" to="300" dur="2s" repeatCount="indefinite">
+    </rect>
+
+        <!-- 一个圆形 -->
+<!--    <path d="M80 80 m-40,0 a40,40 0,1,1 80,0 a40,40 0,1,1 -80,0" fill="red" />-->
+</svg>
+
+<h3>path参数</h3>
+<h4>M (Move to)</h4>
+<p>
+    语法: M x y 或 m dx dy
+</p>
+<p>
+    描述: 将画笔移动到指定的坐标 (x, y)（绝对定位）或相对于当前位置的偏移量 (dx, dy)（相对定位）。
+</p>
+<h4>L (Line to)</h4>
+<p>
+    语法: L x y 或 l dx dy
+</p>
+<p>
+    描述: 从当前位置画一条直线到指定的坐标 (x, y) 或相对于当前位置的偏移量 (dx, dy)。
+</p>
+<h4>H (Horizontal line to)</h4>
+<p>
+    语法: H x 或 h dx
+</p>
+<p>
+    描述: 画一条水平线到指定的 x 坐标或相对于当前 x 坐标的水平偏移量 dx。
+</p>
+<h4>V (Vertical line to)</h4>
+<p>
+    语法: V y 或 v dy
+</p>
+<p>
+    描述: 画一条垂直线到指定的 y 坐标或相对于当前 y 坐标的垂直偏移量 dy。
+</p>
+<h4>C (Cubic Bezier curve)</h4>
+<p>
+    语法: C x1 y1 x2 y2 x y 或 c dx1 dy1 dx2 dy2 dx dy
+</p>
+<p>
+    描述: 使用三次贝塞尔曲线从当前点绘制到 (x, y)。(x1, y1) 和 (x2, y2) 是控制点。
+</p>
+<h4>S (Smooth cubic Bezier curve)</h4>
+<p>
+    语法: S x2 y2 x y 或 s dx2 dy2 dx dy
+</p>
+<p>
+    描述: 与 C 命令类似，但第一个控制点是前一个命令第二个控制点的镜像。如果前面没有 C 或 S 命令，则等同于 M 命令后的 C 命令。
+</p>
+<h4>Q (Quadratic Bezier curve)</h4>
+<p>
+    语法: Q x1 y1 x y 或 q dx1 dy1 dx dy
+</p>
+<p>
+    描述: 使用二次贝塞尔曲线从当前点绘制到 (x, y)。(x1, y1) 是控制点。
+</p>
+<h4>T (Smooth quadratic Bezier curve)</h4>
+<p>
+    语法: T x y 或 t dx dy
+</p>
+<p>
+    描述: 与 Q 命令类似，但控制点是前一个命令控制点的镜像。如果前面没有 Q 或 T 命令，则等同于 M 命令后的 Q 命令。
+</p>
+<h4>A (Arc)</h4>
+<p>
+    语法: A rx ry xAxisRotate largeArcFlag sweepFlag x y 或 a rx ry xAxisRotate largeArcFlag sweepFlag dx dy
+</p>
+<p>
+    描述: 通过椭圆弧绘制到指定的 (x, y)。rx 和 ry 是椭圆的半径，xAxisRotate 是 x 轴旋转角度，largeArcFlag 表示选择大弧还是小弧，sweepFlag 表示弧的方向，dx 和 dy 是相对于当前位置的偏移量。
+</p>
+<h4>Z (Close path)</h4>
+<p>
+    语法: Z 或 z
+</p>
+<p>
+    描述: 关闭当前路径，将画笔移动到起始点。
+</p>
+</body>
+</html>
