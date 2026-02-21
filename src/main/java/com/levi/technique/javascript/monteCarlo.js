@@ -25,5 +25,5 @@ function estimatePi(numSamples) {
 window.onload = function () {
     var val = estimatePi(100000);
     console.log("Estimated π:", val);
-    document.getElementById('monteCarloValus').innerHTML = val;
+    document.getElementById('monteCarloValue').innerHTML = val;
 }
